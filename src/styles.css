@@ -12,3 +12,8 @@
 .dropdown-items-list {
   margin-top: 2px;
 }
+.dropdown-title:hover,
+.dropdown-item:hover {
+  background: rgb(115, 115, 232);
+  cursor: pointer;
+}
