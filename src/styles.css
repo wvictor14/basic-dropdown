@@ -1,0 +1,14 @@
+.visible {
+  display: block;
+}
+.hidden { 
+  display: none;
+}
+
+.dropdown-title,
+.dropdown-items-list {
+  border: 1px solid black;
+}
+.dropdown-items-list {
+  margin-top: 2px;
+}
