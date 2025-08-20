@@ -1,6 +1,5 @@
 import "./styles.css";
-
-function addDropDownListener() {
+export function initializeDropdowns() {
   clickOutsideClosesMenu();
 
   const dropdowns = document.querySelectorAll(".dropdown");
@@ -40,4 +39,5 @@ function clickOutsideClosesMenu() {
     });
   });
 }
-addDropDownListener();
+
+// initializeDropdowns();
