@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "basic dropdown",
   "keywords": [],
-  "homepage": "https://github.com/wvictor14/top-dynamic-user-interfaces#readme",
+  "homepage": "https://github.com/wvictor14/basic-dropdown#readme",
   "bugs": {
-    "url": "https://github.com/wvictor14/top-dynamic-user-interfaces/issues"
+    "url": "https://github.com/wvictor14/basic-dropdown/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wvictor14/top-dynamic-user-interfaces.git"
+    "url": "git+https://github.com/wvictor14/basic-dropdown.git"
   },
   "license": "UNLICENSED",
   "author": "Victor",
