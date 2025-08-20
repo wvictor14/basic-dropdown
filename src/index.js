@@ -1,6 +1,8 @@
 import "./styles.css";
 
 function addDropDownListener() {
+  clickOutsideClosesMenu();
+
   const dropdowns = document.querySelectorAll(".dropdown");
   if (!dropdowns) return;
 
@@ -24,4 +26,18 @@ function addDropDownListener() {
   })
 }
 
+function clickOutsideClosesMenu() {
+  document.addEventListener("click", function (e) {
+    const dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach(dropdown => {
+      if (!dropdown.contains(e.target)) {
+        const itemsList = dropdown.querySelector(".dropdown-items-list");
+        if (itemsList) {
+          itemsList.classList.add("hidden");
+          itemsList.classList.remove("visible");
+        }
+      }
+    });
+  });
+}
 addDropDownListener();
