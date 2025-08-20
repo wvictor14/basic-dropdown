@@ -17,7 +17,7 @@
   "module": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --config webpack.library.config.js",
     "dev": "webpack serve",
     "deploy": "sh scripts/deploy.sh",
     "lint": "npx eslint src",
