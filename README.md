@@ -1,40 +1,33 @@
-# wvictor14/template-js
+# wvictor14/basic-dropdown
 
-Template repository created for JS.
+Scoped public package 
 
-Contains basic configuration for Js projects. Use when starting a new git repo, select as template
+Basic dropdown menu
 
-## Features:  
+# Install
 
-### Webpack for bundler
+```bash
+npm i @victor2wy/basic-dropdown
+```
 
-### Linting 
+# Usage
 
-Eslint for JS
+Write a drop down div manually in html 
 
-To use, install eslint manually and follow interactive prompts
-  
-- `npm init @eslint/config@latest`
-- JS modules
-       
-### Formatter: Prettier
-  
-### scripts
+<div class="dropdown">
+    <div class="dropdown-title">Click me to see items</div>
+    <div class="dropdown-items-list">
+      <div class="dropdown-item">This is item 1</div>
+      <div class="dropdown-item">Following is item 2</div>
+      <div class="dropdown-item">Lastly, this is item 3</div>
+    </div>
+</div>
 
-In `package.json`
+Then in js run
 
-`npm run deploy` 
+```js
+import { initializeDropdowns } from "basic-dropdown";
+initializeDropdowns();
+```
 
-- what it does: pushes dist folder to gh-pages branch
-- setup: turn on gh-pages and set to publish `/dist` foler in github repo settings
-
-### src/
-
--  empty `template.html`, `index.js`, and `styles.css` files under `/src`
-
-### plugins
-
-  - html
-  - css loader
-  - source map (dev)
-  - asset loader (e.g. images)
+![alt text](image.png)
