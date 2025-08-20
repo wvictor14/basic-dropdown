@@ -1,12 +1,5 @@
 import "./styles.css";
 
-function makeDropDownItemsHidden() {
-  const dropdownDiv = document.querySelector(".dropdown");
-  const itemsList = dropdownDiv.querySelector(".dropdown-items-list");
-  itemsList.classList.remove("visible");
-  itemsList.classList.add("hidden");
-}
-
 function addDropDownListener() {
   const dropdownDiv = document.querySelector(".dropdown");
   if (!dropdownDiv) return;
@@ -28,6 +21,4 @@ function addDropDownListener() {
   title.addEventListener("click", handleClick);
 }
 
-
-makeDropDownItemsHidden();
 addDropDownListener();
