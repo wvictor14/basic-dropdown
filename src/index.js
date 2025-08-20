@@ -12,10 +12,20 @@ function addDropDownListener() {
   const title = dropdownDiv.querySelector(".dropdown-title");
   const itemsList = dropdownDiv.querySelector(".dropdown-items-list");
 
-  title.addEventListener("click", () => {
-      itemsList.style.display = 'block';
-    
-  });
+  const handleClick = function () {
+
+    const is_hidden = itemsList.classList.contains('hidden');
+
+    if (is_hidden) {
+      itemsList.classList.remove("hidden");
+      itemsList.classList.add("visible");
+    } else {
+      itemsList.classList.remove("visible");
+      itemsList.classList.add("hidden");
+    }
+  }
+
+  title.addEventListener("click", handleClick);
 }
 
 window.addEventListener("click", function (e) {
