@@ -9,37 +9,25 @@ function makeDropDownItemsHidden() {
 
 function addDropDownListener() {
   const dropdownDiv = document.querySelector(".dropdown");
+  if (!dropdownDiv) return;
+
   const title = dropdownDiv.querySelector(".dropdown-title");
   const itemsList = dropdownDiv.querySelector(".dropdown-items-list");
+  if (!title || !itemsList) return;
+  
+  // initialize the items with the hidden class
+  itemsList.classList.add("hidden");
+  itemsList.classList.remove("visible");
 
+  // add event listener that toggles the class on/off
   const handleClick = function () {
-
-    const is_hidden = itemsList.classList.contains('hidden');
-
-    if (is_hidden) {
-      itemsList.classList.remove("hidden");
-      itemsList.classList.add("visible");
-    } else {
-      itemsList.classList.remove("visible");
-      itemsList.classList.add("hidden");
-    }
+    itemsList.classList.toggle("hidden");
+    itemsList.classList.toggle("visible");
   }
 
   title.addEventListener("click", handleClick);
 }
 
-window.addEventListener("click", function (e) {
-  const dropdownDiv = document.querySelector(".dropdown");
-  const itemsList = dropdownDiv.querySelector(".dropdown-items-list");
-
-  if (itemsList.contains(e.target)) {
-    // Clicked in box
-  } else {
-    // // Clicked outside the box
-    // itemsList.style.display = 'none';
-    // itemsList.classList.add("hidden");
-  }
-});
 
 makeDropDownItemsHidden();
 addDropDownListener();
